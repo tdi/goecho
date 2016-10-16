@@ -72,12 +72,16 @@ func main() {
 
 	log.Print("Listening on ", connString)
 	c := make(chan string)
+
+	go func() {
+		log.Print(<-c)
+	}()
+
 	for {
 		conn, err := ln.AcceptTCP()
 		if err != nil {
 			log.Fatal(err)
 		}
 		go handleConnection(conn, c)
-		log.Print(<-c)
 	}
 }
