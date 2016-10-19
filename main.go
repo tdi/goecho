@@ -54,7 +54,7 @@ func setupTCPServer(connString string) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	log.Print("Listening on ", connString)
+	log.Print("Listening on TCP", connString)
 	c := make(chan string)
 	for {
 		conn, err := ln.AcceptTCP()
@@ -79,7 +79,7 @@ func setupUDPServer(connString string) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	log.Print("Listening on ", connString)
+	log.Print("Listening on UDP", connString)
 	buf := make([]byte, 1024)
 	for {
 		_, clientAddress, err := conn.ReadFromUDP(buf)
