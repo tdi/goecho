@@ -1,4 +1,5 @@
 # Goecho
+[![Build Status](https://travis-ci.org/tdi/goecho.svg?branch=master)](https://travis-ci.org/tdi/goecho)
 
 This is intended as an example for Computer Networks 2 class at Poznań University of Technology. Mostly usable by my students. Goecho lousy implements Echo protocol over TCP described in [RFC862](https://tools.ietf.org/html/rfc862).
 
